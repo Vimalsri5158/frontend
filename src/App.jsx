@@ -57,7 +57,9 @@ const UserDialog = ({ handleDialog, fetchStudents }) => {
           }}
         >
           <label htmlFor="name">Name:</label>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;
           <input
             type="text"
             id="name"
@@ -69,7 +71,9 @@ const UserDialog = ({ handleDialog, fetchStudents }) => {
           <br />
 
           <label htmlFor="age">Age:</label>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <input
             type="number"
             id="age"
@@ -93,7 +97,8 @@ const UserDialog = ({ handleDialog, fetchStudents }) => {
           <br />
 
           <label>Gender:</label>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <select
             id="gender"
             name="gender"
@@ -172,12 +177,28 @@ function App() {
     <div className="container">
       <div className="row" style={{display:'flex'}}>
         <div className="col-md-8">
-          <h2 className="font-weight-bold text-maroon" style={{ color: 'green', fontSize: '20px', marginLeft: '10rem' }}>LIST OF STUDENTS</h2>
+          <h2 className="font-weight-bold text-maroon" 
+            style={{ 
+              color: 'green', 
+              fontSize: '20px', 
+              marginLeft: '10rem' 
+            }}>
+            LIST OF STUDENTS
+          </h2>
         </div>
+        
         <div className="col-md-4">
-          <button onClick={handleDialog} className="btn btn-primary" style={{ color: 'green', fontSize: '20px', marginLeft: '50rem' }}>ADD</button>
+          <button onClick={handleDialog} className="btn btn-primary" 
+            style={{ 
+              color: 'green', 
+              fontSize: '20px', 
+              marginLeft: '50rem' 
+            }}>
+            ADD
+          </button>
         </div>
       </div>
+      
       <div className="row-m4">
         {students.map(student => (
           <div className="col-md-4 mb-4" key={student.id}>
@@ -206,8 +227,9 @@ function App() {
         ))}
       </div>
     </div>
+  
     {showDialog && <UserDialog handleDialog={handleDialog} fetchStudents={fetchStudents} handleRemoveStudent={handleRemoveStudent}/>}
-                  </>
+  </>
     );
 }
 
